@@ -14,10 +14,12 @@ public class Rectangle extends Polygon {
 	}
 	
 	
-	
+	@Override 
 	public double getArea()
 	{
-		return width * height;
+		double area = width * height;
+		
+		return area;
 	}
 	
 	
