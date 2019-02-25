@@ -3,7 +3,7 @@ public class Square extends Rectangle {
 
 	public Square(double size) 
 	{
-		super(id, height, width);
+		super("",size);
 		
 	}
 	

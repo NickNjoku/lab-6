@@ -95,7 +95,24 @@ public abstract class Shape implements Comparable<Shape>
 	@Override
 	public int compareTo(Shape s)
 	{
+		int num = 0;
 		// TODO: complete this...
+		if(this.compareTo(s) > 0)
+		{
+			num = 1;
+			
+		}
+		
+		if(this.compareTo(s) < 0)
+		{
+			num = -1;
+		}
+		
+		if(this.compareTo(s) == 0)
+		{
+			num = 0;
+		}
+		return num;
 	}
 
 	/**
