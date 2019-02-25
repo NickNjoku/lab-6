@@ -11,6 +11,9 @@ public class Rectangle extends Polygon {
 		
 		this.height = height;
 		this.width = width;
+		
+		sideLengths.add(height * 2);
+		sideLengths.add(width * 2);
 	}
 	
 	
