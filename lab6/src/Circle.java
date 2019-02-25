@@ -47,7 +47,7 @@ public class Circle extends Ellipse
 	{
 		// TODO: complete this...
 		
-		return 2 * Math.PI * radius;
+		return 2 * Math.PI * getMinorAxis();
 	}
 
 	/**

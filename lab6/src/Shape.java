@@ -147,5 +147,6 @@ public abstract class Shape implements Comparable<Shape>
 	public String toString()
 	{
 		// TODO: complete this...
+		return String.format(getShapeType(), args)
 	}
 }
