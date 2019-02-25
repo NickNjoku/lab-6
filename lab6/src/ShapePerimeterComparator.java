@@ -39,7 +39,17 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 			num = -1;
 		}
 		
-		if(s1.getPerimeter() >)
+		if(s1.getPerimeter() > s2.getPerimeter())
+		{
+			num = 1;
+		}
+		
+		if(s1.getPerimeter() == s2.getPerimeter())
+		{
+			num = 0;
+		}
+		
+		return num;
 	}
 
 	/**
@@ -53,5 +63,12 @@ public class ShapePerimeterComparator implements Comparator<Shape>
 	public boolean equals(Shape s1, Shape s2)
 	{
 		// TODO: complete this...
+		boolean eq = false;
+		if(this.compare(s1, s2) == 0)
+		{
+			eq = true;
+		}
+		
+		return eq;
 	}
 }
