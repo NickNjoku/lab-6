@@ -194,5 +194,17 @@ public class ShapeTest
     public void NaturalCompareTest()
     {
 		// TODO: complete this...
+		
+		Shape rect = new Rectangle("R1", 5.0,3.0);
+		Shape sqr = new Square("S1", 3.0);
+		Shape sqr2 = new Square("S2", 3.0);
+		Shape trap = new Trapezoid("T1", 10.0, 12.0, 15.0, 20.0);
+		
+		Assert.assertEquals(1, rect.compareTo(sqr));
+		Assert.assertEquals(-1, sqr.compareTo(rect));
+		Assert.assertEquals(1, rect.compareTo(sqr));
+		Assert.assertEquals(0, sqr.compareTo(sqr2));
+		
+		
     }
 }
