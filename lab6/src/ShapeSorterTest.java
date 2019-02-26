@@ -57,9 +57,6 @@ public class ShapeSorterTest
 		
 		Assert.assertEquals("Rectangle\t ID = Rect1\t area = 50.000\t perimeter = 30.000Equilateral Triangle\t ID = Tri1\t area = 27.713\t perimeter = 24.000Trapezoid\t ID = Trap1\t area = 45.596\t perimeter = 42.000", sorter.toString());
 		
-		
-		
-		
 	}
 
 	/**
@@ -84,12 +81,6 @@ public class ShapeSorterTest
 		sorter.sortShapes(area);
 		
 		Assert.assertEquals("Equilateral Triangle\t ID = Tri1\t area = 27.713\t perimeter = 24.000Trapezoid\t ID = Trap1\t area = 45.596\t perimeter = 42.000Rectangle\t ID = Rect1\t area = 50.000\t perimeter = 30.000", sorter.toString());
-		
-		
-		
-		
-
-		
 		
 	}
 
@@ -116,9 +107,6 @@ public class ShapeSorterTest
 		Assert.assertEquals("Equilateral Triangle\t ID = Tri1\t area = 27.713\t perimeter = 24.000Rectangle\t ID = Rect1\t area = 50.000\t perimeter = 30.000Trapezoid\t ID = Trap1\t area = 45.596\t perimeter = 42.000", sorter.toString());
 
 		
-		
-		
-		
 	}
 
 	/**
@@ -140,9 +128,5 @@ public class ShapeSorterTest
 		
 		Assert.assertEquals("Rectangle\t ID = Rect1\t area = 50.000\t perimeter = 30.000Equilateral Triangle\t ID = Tri1\t area = 27.713\t perimeter = 24.000Trapezoid\t ID = Trap1\t area = 45.596\t perimeter = 42.000", sorter.toString());
 
-		
-		
-		
-		
 	}
 }

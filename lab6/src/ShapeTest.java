@@ -20,7 +20,10 @@ public class ShapeTest
 	@Test
 	public void SquareTest()
 	{
+		//Creates Shape object, Rectangle
 		Shape sqr = new Square("Square1", 3.0);
+		
+		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Square area incorrect.", 9.0, sqr.getArea(), 0.0001);
 		Assert.assertEquals("Square perimeter incorrect.", 12.0, sqr.getPerimeter(), 0.0001);
 		Assert.assertEquals("Square type incorrect.", "Square", sqr.getShapeType());
@@ -35,7 +38,10 @@ public class ShapeTest
 	{
 		// TODO: complete this...
 		
+		//Creates Shape object, Rectangle
 		Shape Rec = new Rectangle("Rectangle1", 4.0, 5.0);
+		
+		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Rectangele area incorrect.", 20.0, Rec.getArea(), 0.0001);
 		Assert.assertEquals("Rectangle perimeter incorrect.", 18.0, Rec.getPerimeter(), 0.0001);
 		Assert.assertEquals("Rectangle type incorrect. ", "Rectangle", Rec.getShapeType());
@@ -50,7 +56,10 @@ public class ShapeTest
 	{
 		// TODO: complete this...
 		
+		//Creates Shape object, Triangle
 		Shape Tri = new EquilateralTriangle("Triangle1", 8.0);
+		
+		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Triangle area incorrect.", 27.71281, Tri.getArea(), 0.0001);
 		Assert.assertEquals("Triangle perimeter incorrect.", 24.0, Tri.getPerimeter(), 0.0001);
 		Assert.assertEquals("Triangle type incorrect. ", "Equilateral Triangle", Tri.getShapeType());
@@ -66,7 +75,10 @@ public class ShapeTest
 	{
 		// TODO: complete this...
 		
+		// Creates Shape object, Trapezoid
 		Shape Trap = new Trapezoid("Trapezoid1", 10.0, 15.0, 35.0, 20.0);
+		
+		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Trapezoid area incorrect.", 259.27248, Trap.getArea(), 0.0001);
 		Assert.assertEquals("Trapezoid perimeter incorrect.", 80.0, Trap.getPerimeter(), 0.0001);
 		Assert.assertEquals("Trapezoid type incorrect. ", "Trapezoid", Trap.getShapeType());
@@ -105,7 +117,11 @@ public class ShapeTest
 	public void CircleTest()
 	{
 		// TODO: complete this...
+		
+		// Creates Shapes object, Circle
 		Shape circ = new Circle("Circle1", 5.0);
+		
+		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Circle area incorrect.", Math.PI * 5.0 * 5.0, circ.getArea(), 0.0001);
 		Assert.assertEquals("Circle perimeter incorrect.", 2 *Math.PI * 5.0, circ.getPerimeter(), 0.0001);
 		Assert.assertEquals("Circle type incorrect.", "Circle",circ.getShapeType());
@@ -127,6 +143,7 @@ public class ShapeTest
 		Shape sqr = new Square("S1", 3.0);
 		Shape trap = new Trapezoid("T1", 10.0, 12.0, 15.0, 20.0);
 		
+		// Checcks to see Strings are being outputted correctly. error if it does match.
 		Assert.assertEquals("Rectangle\t ID = R1\t area = 9.000\t perimeter = 12.000", rect.toString());
 		Assert.assertEquals("Square\t ID = S1\t area = 9.000\t perimeter = 12.000", sqr.toString());
 		Assert.assertEquals("Trapezoid\t ID = T1\t area = 171.812\t perimeter = 57.000", trap.toString());
@@ -194,15 +211,18 @@ public class ShapeTest
     public void NaturalCompareTest()
     {
 		// TODO: complete this...
-		
+		//Create new shape objects
 		Shape rect = new Rectangle("R1", 5.0,3.0);
 		Shape sqr = new Square("S1", 3.0);
 		Shape sqr2 = new Square("S2", 3.0);
 		Shape trap = new Trapezoid("T1", 10.0, 12.0, 15.0, 20.0);
 		
+		//Test when object comparing to other shape object is bigger
 		Assert.assertEquals(1, rect.compareTo(sqr));
+		//Test when object comparing to other shape object is smaller
 		Assert.assertEquals(-1, sqr.compareTo(rect));
 		Assert.assertEquals(1, rect.compareTo(sqr));
+		//Test when things being compared equals each other 
 		Assert.assertEquals(0, sqr.compareTo(sqr2));
 		
 		
