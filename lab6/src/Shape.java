@@ -97,36 +97,37 @@ public abstract class Shape implements Comparable<Shape>
 	{
 		int num = 0;
 		// TODO: complete this...
-		if(s.getPerimeter() > 0)
+		if(this.getArea() > s.getArea())
+		{
+			num = 1;
+		}
+		
+		if(this.getArea() < s.getArea())
+		{
+			num = -1;
+		}
+		
+		if(this.getArea() == s.getArea())
+		{
+			num = 0;
+		}
+		else if(this.getPerimeter() > s.getPerimeter())
 		{
 			num = 1;
 			
 		}
 		
-		if(s.getPerimeter() < 0)
+		else if(this.getPerimeter() < s.getPerimeter())
 		{
 			num = -1;
 		}
 		
-		if(s.getPerimeter() == 0)
+		else if(this.getPerimeter() == s.getPerimeter())
 		{
 			num = 0;
 		}
 		
-		if(s.getArea() > 0)
-		{
-			num = 1;
-		}
 		
-		if(s.getArea() < 0)
-		{
-			num = -1;
-		}
-		
-		if(s.getArea() == 0)
-		{
-			num = 0;
-		}
 		return num;
 	}
 

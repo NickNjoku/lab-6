@@ -49,6 +49,7 @@ public class ShapeTest
 	public void TriangleTest()
 	{
 		// TODO: complete this...
+		
 		Shape Tri = new EquilateralTriangle("Triangle1", 8.0);
 		Assert.assertEquals("Triangle area incorrect.", 27.71281, Tri.getArea(), 0.0001);
 		Assert.assertEquals("Triangle perimeter incorrect.", 24.0, Tri.getPerimeter(), 0.0001);
@@ -114,11 +115,24 @@ public class ShapeTest
 
 	/**
 	 * Tests for Shape's toString().
+	 * Format of toString :"%s\t ID = %s\t area = %.3f\t perimeter = %.3f"
 	 */
 	@Test
 	public void ShapeToStringTest()
 	{
 		// TODO: complete this...
+		
+		//Test toString output
+		Shape rect = new Rectangle("R1", 3.0,3.0);
+		Shape sqr = new Square("S1", 3.0);
+		Shape trap = new Trapezoid("T1", 10.0, 12.0, 15.0, 20.0);
+		
+		Assert.assertEquals("Rectangle\t ID = R1\t area = 9.000\t perimeter = 12.000", rect.toString());
+		Assert.assertEquals("Square\t ID = S1\t area = 9.000\t perimeter = 12.000", sqr.toString());
+		Assert.assertEquals("Trapezoid\t ID = T1\t area = 171.812\t perimeter = 57.000", trap.toString());
+
+
+		
 	}
 
 	//==================================================================================================================

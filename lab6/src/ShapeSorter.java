@@ -78,7 +78,7 @@ public class ShapeSorter
 		// TODO: complete this...
 		for(int index = 0; index< shapes.size();++index)
 		{
-			//System.out.println(list);
+			
 			list += shapes.get(index).toString();
 		}
 		
