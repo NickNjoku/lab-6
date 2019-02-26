@@ -62,6 +62,7 @@ public class ShapeSorter
 	public void sortShapes(Comparator<Shape> comparator)
 	{
 		// TODO: complete this...
+		Collections.sort(shapes, comparator);
 	}
 
 	/**
@@ -73,7 +74,15 @@ public class ShapeSorter
 	@Override
 	public String toString()
 	{
+		String list = "";
 		// TODO: complete this...
+		for(int index = 0; index< shapes.size();++index)
+		{
+			//System.out.println(list);
+			list += shapes.get(index).toString();
+		}
+		
+		return list;
 	}
 
 }

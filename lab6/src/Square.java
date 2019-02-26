@@ -1,9 +1,9 @@
 
 public class Square extends Rectangle {
 
-	public Square(double size) 
+	public Square(String id,double size) 
 	{
-		super("",size,size);
+		super(id,size,size);
 		
 		
 	}

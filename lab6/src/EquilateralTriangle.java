@@ -24,6 +24,8 @@ public class EquilateralTriangle extends Polygon
 		// TODO: complete this...
 		super(id);
 		this.sideLength = sideLength;
+		
+		//adds the three equal sides of the triangle to the ArrayList that is provided by the Polygon class which then adds up the total of the sides to get the perimeter
 		sideLengths.add(sideLength * 3);
 		
 		
@@ -39,6 +41,7 @@ public class EquilateralTriangle extends Polygon
 	{
 		// TODO: complete this...
 		
+	
 		return sideLength * sideLength * (Math.sqrt(3)/4);
 	}
 
@@ -51,6 +54,7 @@ public class EquilateralTriangle extends Polygon
 	public String getShapeType()
 	{
 		// TODO: complete this...
+		
 		
 		return "Equilateral Triangle";
 	}

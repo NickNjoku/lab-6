@@ -97,18 +97,33 @@ public abstract class Shape implements Comparable<Shape>
 	{
 		int num = 0;
 		// TODO: complete this...
-		if(this.compareTo(s) > 0)
+		if(s.getPerimeter() > 0)
 		{
 			num = 1;
 			
 		}
 		
-		if(this.compareTo(s) < 0)
+		if(s.getPerimeter() < 0)
 		{
 			num = -1;
 		}
 		
-		if(this.compareTo(s) == 0)
+		if(s.getPerimeter() == 0)
+		{
+			num = 0;
+		}
+		
+		if(s.getArea() > 0)
+		{
+			num = 1;
+		}
+		
+		if(s.getArea() < 0)
+		{
+			num = -1;
+		}
+		
+		if(s.getArea() == 0)
 		{
 			num = 0;
 		}
@@ -147,6 +162,6 @@ public abstract class Shape implements Comparable<Shape>
 	public String toString()
 	{
 		// TODO: complete this...
-		return String.format(getShapeType(), args)
+		return String.format("%s\t ID = %s\t area = %.3f\t perimeter = %.3f", this.getShapeType(), this.getId(), this.getArea(), this.getPerimeter());
 	}
 }

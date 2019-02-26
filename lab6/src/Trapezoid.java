@@ -34,6 +34,7 @@ public class Trapezoid extends Polygon
 		this.topBase = topBase;
 		this.bottomBase = bottomBase;
 		
+		//adds all the sides of the Trapezoid to the protected ArrayList sideLengths in the Polygon class so they can be totaled up to find the perimeter
 		sideLengths.add(leftSide);
 		sideLengths.add(rightSide);
 		sideLengths.add(topBase);
