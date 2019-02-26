@@ -157,6 +157,14 @@ public class ShapeTest
 	public void ComparePerimeterTest()
 	{
 		// TODO: complete this...
+		ShapePerimeterComparator sc = new ShapePerimeterComparator();
+		// Test unequal perimeter:
+		Shape rect = new Rectangle("R1", 5.0,4.0);
+		Shape sqr = new Square("S1", 3.0);
+		
+		Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 1 ,sc.compare(rect, sqr));
+		Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", -1, sc.compare(sqr, rect));
+		
 	}
 
 	/**
