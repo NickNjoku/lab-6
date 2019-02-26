@@ -161,9 +161,15 @@ public class ShapeTest
 		// Test unequal perimeter:
 		Shape rect = new Rectangle("R1", 5.0,4.0);
 		Shape sqr = new Square("S1", 3.0);
-		
 		Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 1 ,sc.compare(rect, sqr));
 		Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", -1, sc.compare(sqr, rect));
+		Assert.assertFalse("ShapeAreaComparator incorrectly finds shapes equal.", sc.equals(sqr, rect));
+		 
+		//Test equal Perimeters
+		Shape rect2 = new Rectangle("R1", 3.0,3.0);
+		Shape sqr2 = new Square("S1", 3.0);
+		Assert.assertEquals("ShapePerimeterComparator should find shapes equal.", 0, sc.compare(rect2, sqr2));
+		Assert.assertTrue("ShapePerimeterComparator should find shapes equal.", sc.equals(rect2,sqr2));
 		
 	}
 
