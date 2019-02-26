@@ -56,6 +56,6 @@ public class EquilateralTriangle extends Polygon
 		// TODO: complete this...
 		
 		
-		return "Equilateral Triangle";
+		return "EquilateralTriangle";
 	}
 }

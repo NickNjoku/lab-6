@@ -15,7 +15,7 @@ public class Square extends Rectangle {
 	public Square(String id,double size) 
 	{
 		//size is put into the rectangle constructor twice for width and height since there is no difference in the length and height for a square
-		super(id,size,size);
+		super(id,size,size); 
 		
 	}
 	/**

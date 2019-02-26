@@ -62,7 +62,7 @@ public class ShapeTest
 		//Checks to see Area, Perimeter, Shape Type, and Shape ID are correct
 		Assert.assertEquals("Triangle area incorrect.", 27.71281, Tri.getArea(), 0.0001);
 		Assert.assertEquals("Triangle perimeter incorrect.", 24.0, Tri.getPerimeter(), 0.0001);
-		Assert.assertEquals("Triangle type incorrect. ", "Equilateral Triangle", Tri.getShapeType());
+		Assert.assertEquals("Triangle type incorrect. ", "EquilateralTriangle", Tri.getShapeType());
 		Assert.assertEquals("Shape ID incorrect.", "Triangle1", Tri.getId());
 		
 	}
@@ -144,9 +144,9 @@ public class ShapeTest
 		Shape trap = new Trapezoid("T1", 10.0, 12.0, 15.0, 20.0);
 		
 		// Checcks to see Strings are being outputted correctly. error if it does match.
-		Assert.assertEquals("Rectangle\t ID = R1\t area = 9.000\t perimeter = 12.000", rect.toString());
-		Assert.assertEquals("Square\t ID = S1\t area = 9.000\t perimeter = 12.000", sqr.toString());
-		Assert.assertEquals("Trapezoid\t ID = T1\t area = 171.812\t perimeter = 57.000", trap.toString());
+		Assert.assertEquals("Rectangle:\t ID = R1\t area = 9.000\t perimeter = 12.000", rect.toString());
+		Assert.assertEquals("Square:\t ID = S1\t area = 9.000\t perimeter = 12.000", sqr.toString());
+		Assert.assertEquals("Trapezoid:\t ID = T1\t area = 171.812\t perimeter = 57.000", trap.toString());
 
 
 		
@@ -179,6 +179,21 @@ public class ShapeTest
         Assert.assertEquals("ShapeAreaComparator gave incorrect ordering.", 1, sc.compare(sqr2, rect));
         Assert.assertEquals("ShapeAreaComparator gave incorrect ordering.", -1, sc.compare(rect, sqr2));
         Assert.assertFalse("ShapeAreaComparator incorrectly finds shapes equal.", sc.equals(sqr2, rect));
+        
+        // Test equal Area equal perimeter
+        Shape sqr3 = new Square("S3", 5.0);
+        Shape sqr4 = new Square("S4", 5.0);
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 0, sc.compare(sqr3, sqr4));
+        Assert.assertEquals("ShapePerimeterComparator gave incorrect ordering.", 0, sc.compare(sqr4, sqr3));
+        
+        
+       
+        
+        
+        
+        
+       
+        
 	}
 
 	/**
@@ -202,6 +217,8 @@ public class ShapeTest
 		Assert.assertEquals("ShapePerimeterComparator should find shapes equal.", 0, sc.compare(rect2, sqr2));
 		Assert.assertTrue("ShapePerimeterComparator should find shapes equal.", sc.equals(rect2,sqr2));
 		
+		
+		
 	}
 
 	/**
@@ -223,7 +240,18 @@ public class ShapeTest
 		Assert.assertEquals(-1, sqr.compareTo(rect));
 		Assert.assertEquals(1, rect.compareTo(sqr));
 		//Test when things being compared equals each other 
-		Assert.assertEquals(0, sqr.compareTo(sqr2));
+		Assert.assertEquals(0, sqr.compareTo(sqr2)); 
+		
+		// Test equal Area equal perimeter
+        Shape sqr3 = new Square("S3", 5.0);
+        Shape sqr4 = new Square("S4", 5.0);
+        Assert.assertEquals(0, sqr3.compareTo(sqr4)); 
+        
+        // Test equal Area different perimeter
+        Shape rect3 = new Rectangle("R2", 2.0, 8.0);
+        Shape sqr5 = new Square("S2", 4.0);
+        Assert.assertEquals(1, rect3.compareTo(sqr5));
+        Assert.assertEquals(-1, sqr5.compareTo(rect3));
 		
 		
     }

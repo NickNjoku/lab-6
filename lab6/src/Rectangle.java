@@ -20,8 +20,10 @@ public class Rectangle extends Polygon {
 		this.width = width;
 		
 		//Adds the two  height sides of the Rectangle and adds the two width sides of the Rectangle
-		sideLengths.add(height * 2);
-		sideLengths.add(width * 2);
+		sideLengths.add(height);
+		sideLengths.add(height);
+		sideLengths.add(width);
+		sideLengths.add(width);
 	}
 	
 	/**
