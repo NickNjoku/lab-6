@@ -102,7 +102,7 @@ public abstract class Shape implements Comparable<Shape>
 			num = 1;
 		}
 		
-		else if(this.getArea() < s.getArea())
+		else if(this.getArea() < s.getArea()) 
 		{
 			num = -1;
 		}
@@ -134,7 +134,7 @@ public abstract class Shape implements Comparable<Shape>
 	 */
 	public String getId()
 	{
-	    return id;
+	    return id; 
 	}
 
 	/**

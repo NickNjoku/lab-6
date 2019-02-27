@@ -46,7 +46,7 @@ public class Rectangle extends Polygon {
 	@Override
 	public String getShapeType()
 	{
-		return "Rectangle";
+		return "Rectangle"; 
 	}
 
 }
